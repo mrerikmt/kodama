@@ -1,0 +1,319 @@
+/* MAIN */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 90%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #ffffff;
+  background-color: #000000;
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  min-height: calc(100vh - 2 * 4vw);
+}
+
+.container {
+  max-width: 120rem;
+  height: 800px;
+  background-image: url('/img/ramen-bowl.jpg');
+  background-size: auto 75rem;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVIGATION */
+.nav-bar {
+  display: block;
+  margin-left: 20%;
+  margin-right: auto;
+  letter-spacing: 2px;
+}
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  width: 75%;
+  list-style: none;
+  justify-content: center;
+  margin: 50px 0px 50px 0px;
+}
+
+.nav-item a:link,
+.nav-item a:visited {
+  display: flex;
+  color: rgb(224, 221, 221);
+  font-size: 300%;
+  justify-content: space-around;
+  margin: 0px 60px 0px 60px;
+  text-decoration: none;
+  height: 4rem;
+}
+
+.nav-item a:hover,
+.nav-item a:active {
+  transition: 0.2s;
+  transform: scale(1.05);
+  color: rgb(248, 3, 3);
+}
+
+.reservations {
+  margin-left: 28px;
+}
+.contact-list {
+  margin-left: 20px;
+}
+.loc-list {
+  margin-left: 70px;
+}
+.location a ion-icon {
+  margin-left: 150px;
+}
+
+/* HEADER */
+
+.header {
+  height: 15rem;
+  text-align: center;
+  letter-spacing: 10px;
+  font-size: 10rem;
+  color: rgb(248, 3, 3);
+  font-weight: 100;
+  margin-top: 1rem;
+  text-shadow: -1px 1px 2px rgb(167, 164, 164);
+}
+/* MAIN BODY */
+.header-2 {
+  text-align: center;
+  margin: 10px auto 20px auto;
+  font-weight: 100;
+  color: rgb(167, 164, 164);
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 3%;
+  background-color: #00000099;
+  margin-bottom: 3%;
+  color: rgb(167, 164, 164);
+}
+
+.details a ion-icon {
+  color: rgb(167, 164, 164);
+  background: none;
+  border: none;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 100px 15px 100px;
+  font-family: 'Lato Thin', sans-serif;
+  font-weight: 100;
+  letter-spacing: 3px;
+}
+.info-details {
+  list-style: none;
+}
+
+.contact-icon-align {
+  margin-left: 75px;
+}
+.hours a ion-icon {
+  margin-left: 120px;
+}
+/* FOOTER */
+.footer-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 10px;
+  width: 80%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: none !important;
+}
+
+.footer-social-links {
+  width: 225px;
+  display: flex;
+  list-style: none;
+  display: flex;
+}
+
+.footer-social-links li a {
+  padding: 0 20px 0 20px;
+  font-size: 120%;
+  text-decoration: none;
+  align-items: center;
+}
+
+.footer-copyright {
+  color: #fff;
+  text-align: center;
+  margin-top: 2%;
+  min-width: 100%;
+}
+
+/* IMAGES & ICONS */
+ion-icon {
+  font-size: 200%;
+  padding: 5px;
+  /* background-color: #ffffff50;
+  border: 1px solid rgb(247, 206, 206, 0.25); */
+  border-radius: 5px;
+}
+
+.fb-icon ion-icon {
+  color: #3b5998;
+}
+
+.fb-icon:link,
+.fb-icon:visited {
+  color: #3b5998;
+}
+
+.fb-icon:hover,
+.fb-icon:active {
+  transition: 0.2s;
+  transform: scale(1.06);
+}
+
+/* facebook light blue #8b9dc3 */
+
+.twitter-icon ion-icon {
+  color: #0084b4;
+}
+
+.twitter-icon:link,
+.twitter-icon:visited {
+  color: #0084b4;
+}
+
+.twitter-icon:hover,
+.twitter-icon:active {
+  transition: 0.2s;
+  transform: scale(1.06);
+}
+
+/* twitter light blue #1da1f2 */
+
+.insta-icon ion-icon {
+  color: #515bd4;
+}
+
+.insta-icon:link,
+.insta-icon:visited {
+  color: #515bd4;
+}
+
+.insta-icon:hover,
+.insta-icon:active {
+  transition: 0.2s;
+  transform: scale(1.06);
+}
+/* /////// MENU PAGE ////////*/
+.container-menu {
+  background-color: black;
+  max-width: 120rem;
+  height: 225rem;
+  background-size: auto 75rem;
+  background-repeat: no-repeat;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+}
+
+/* MENU ITEMS */
+.menu-items-headers {
+  margin-left: 18rem;
+  margin-bottom: 2rem;
+}
+.menu-items ul {
+  margin-left: 18rem;
+  list-style: none;
+}
+.menu-img-text {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3rem;
+  width: 65rem;
+}
+.menu-img-text p {
+  color: red;
+}
+.menu-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  margin-right: 5rem;
+  flex-wrap: wrap;
+}
+.price {
+  display: flex;
+  margin-top: 15px;
+  margin-right: -5.5rem;
+}
+.beverage-icon {
+  background: none;
+  border: none;
+  color: rgb(167, 164, 164);
+  margin-top: 0.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-size: 150%;
+}
+
+.shio-image {
+  margin-top: 1rem;
+  width: 10%;
+  height: 10%;
+}
+/* Reservations */
+.p1,
+.p2 {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 1rem;
+}
+
+/*// ABOUT PAGE //*/
+.about-p {
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  text-align: center;
+}
+
+/* footer (menu, reservations, about)*/
+.page-icon {
+  background-color: rgb(224, 221, 221);
+}
+.footer-container-pages {
+  height: 10rem;
+}
+.footer-copyright-pages {
+  margin-top: -50px;
+}
+.footer-social-links-pages {
+  margin-bottom: none;
+}

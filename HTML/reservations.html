@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kodama Ramen Menu</title>
+    <meta name="Kodama Ramen" content="Menu" />
+    <meta name="Erik Snyder" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <link rel="stylesheet" href="/CSS/res-style.css" />
+    <!-- <script defer src="JS/script.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <div class="container-reservations">
+      <div class="header-div">
+        <h1 class="header">Kodama Ramen</h1>
+      </div>
+      <div class="navigation">
+        <nav class="nav-bar">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="/HTML/menu.html">MENU</a>
+            </li>
+            <li class="nav-item reservations">
+              <a href="/index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="/HTML/about.html">ABOUT</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div id="welcome_event" class="welcome-event"></div>
+      <main>
+        <section id="events">
+            <div class="events-container"></div>
+        </section>
+        <h2 class="header-2">Reservations</h2>
+        <p class="p1">For parties larger than 8 please call us to schedule. 503-555-1581</p>
+        <p class="p2">Reservations begin at 4 pm. Our last reservation time slot begins at 9:30 pm.</p>
+            <section id="add-event">
+                <form class="form">
+                    <input type="text" id="name" placeholder="Full Name (example: Bob Smith)">
+                    <input type="number" id="diners" placeholder="Number of Diners">
+                    <input type="time" id="time" placeholder="Time">
+                    <input type="date" id="date" placeholder="Date">
+                    <input type="email" id="email" name="email" placeholder="Enter valid email">
+                    <input type="text" id="number" placeholder="Cell Phone Number (example: 555-555-5555)">
+                    <!-- onfocus="(this.type='date')" onblur="(this.type='text')" -->
+                    <textarea id="restriction" cols="30" rows="5" placeholder="Please let us know if you have any dietary restrictions..."></textarea>
+                    <!-- ///////SaveButton///////// -->
+                    <div class="save-btns">
+                      <button class="btn btn-primary save">Save</button>
+                      <button class="btn btn-primary reset">Reset All</button>
+                    </div>
+                </form>
+            </section>
+            <!-- ////////////Reservation Details Confirmation Pop Up////////////// -->
+            <div class="details-popup">
+              <div class="formPopup" id="popupForm">
+                 <button class="close" type="button" onclick="closeForm() "><a href="#"
+                  ><ion-icon <ion-icon lines="none" class="close-icon" name="close"></ion-icon></ion-icon
+                ></a></button>
+                 <div id="confirm-details" class="confirm-details"></div>
+                 <!-- ///////////Submit Button////////// -->
+                 <div class="confirm-btns">
+                    <button type="submit" class="btn btn-primary submit">Confirm</button> 
+                    <button type="submit" onclick="closeForm()" class="btn btn-primary revise">Revise</button>
+                 </div>
+              </div>
+            </div>
+            <!-- ///////////Reservation Processing Pop Up/////////////////////////// -->
+            <div class="details-popup">
+              <div class="formPopup" id="popupProcessing">
+                 <button class="close" type="button" onclick="closeFormP()"><a href="#"
+                  ><ion-icon <ion-icon class="close-icon" name="close"></ion-icon></ion-icon
+                ></a></button>
+                 <div id="processing" class="processing"></div>
+              </div>
+            </div>
+      </main>
+      </div>
+      <footer>
+        <div class="footer-container footer-container-pages">
+          <div>
+            <ul class="footer-social-links footer-social-links-pages">
+              <li class="fb-icon">
+                <a href="#"
+                  ><ion-icon <ion-icon class="page-icon" name="logo-facebook"></ion-icon></ion-icon
+                ></a>
+              </li>
+              <li class="twitter-icon">
+                <a href="#"
+                  ><ion-icon <ion-icon class="page-icon" name="logo-twitter"></ion-icon></ion-icon
+                ></a>
+              </li>
+              <li class="insta-icon">
+                <a href="#"
+                  ><ion-icon <ion-icon class="page-icon" name="logo-instagram"></ion-icon></ion-icon
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-copyright footer-copyright-pages">
+            <p>Copyright &copy; 2021 by E.Snyder All rights reserved.</p>
+          </div>
+      </footer>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Below: Scripts for the reservation form and Firebase -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC8AkK6Gg7iuLR3UrbNE4u5m3HjswzC6TI",
+
+    authDomain: "kodama-66f70.firebaseapp.com",
+
+    projectId: "kodama-66f70",
+
+    storageBucket: "kodama-66f70.appspot.com",
+
+    messagingSenderId: "44469709219",
+
+    appId: "1:44469709219:web:6b1696603a60026a5c5216"
+
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore()
+</script>
+
+<script src="/JS/db.js"></script>
+<!-- <script src="/JS/app.js"></script> -->
+  </body>
+</html>
