@@ -7,15 +7,17 @@
 }
 
 main {
-  max-width: 60%;
-  margin-left: auto;
-  margin-right: auto;
-  /* margin: auto; */
-  /* padding: 4rem 0; */
+  width: 100%;
+  margin: 0 auto;
 }
 
 section {
   padding: 3rem 0;
+}
+
+.add-event {
+  width: 800px;
+  margin: 0 auto;
 }
 
 .btn {
@@ -47,20 +49,18 @@ section {
 }
 
 .form {
-  /* padding: 0rem 1rem; */
   text-align: center;
-  width: 60rem;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 input,
 textarea,
 select {
   display: block;
-  margin: auto;
+
   margin-bottom: 1rem;
-  width: 60%;
+  width: 100%;
   outline: none;
   padding: 0.4rem;
 }
@@ -119,9 +119,7 @@ input {
 .save-btns {
   display: flex;
   justify-content: center;
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 .save {
   margin-right: 8%;
